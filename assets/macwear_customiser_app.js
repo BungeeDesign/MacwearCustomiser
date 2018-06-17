@@ -1,6 +1,8 @@
 // Macwear Customiser For Shopify
 // Version 1.0 - Property of Bungee Design Limtied
 // Built with ❤ by Bungee Design
+// Project Manage Via MacwearCustomiser Git Repo
+
 
 // Make sure document has fully loaded ready for DOM Control when ready run init
 window.onload = function () {
