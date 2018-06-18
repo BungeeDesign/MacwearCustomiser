@@ -25,6 +25,30 @@ $dark-grey: #0f0f0f;
 
 }
 
+//Preload
+
+.mcPreload {
+    transform: scale(0);
+    width: 100%;
+    transition: all ease .5s;
+}
+
+.mcPreloadImage {
+    box-shadow: -1px 1px 114px rgba(0,0,0,0.9);
+    text-align: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 210px;
+}
+
+.preloaderActive {
+    transform: scale(1);
+}
+
+
 //Editor Section
 .mcEditor {
     width: 700px;
@@ -62,9 +86,9 @@ $dark-grey: #0f0f0f;
     position: relative;
     float: right;
     cursor: pointer;
-    transition: all cubic-bezier(1, 0.08, 0, 0.95) .5s;
+    transition: all ease .5s;
     &:hover {
-        transform: rotate(360deg);
+        transform: scale(1.1);
     }
 }
 

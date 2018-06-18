@@ -15,25 +15,25 @@ function init() {
     var closeBtn = document.querySelector(".close");
     closeBtn.addEventListener("click", close);
 
+    var customiseBtn = document.querySelector(".customiseBtn");
+    customiseBtn.addEventListener("click", open);
+
 
 }
-
 
 //Global for close
 
 var yesClick = "no";
 var noClick = "no";
-
+var closeView = document.querySelector(".closeView");
+var mcContainer = document.querySelector(".macwearCustomiserContainer");
+var mcEditor = document.querySelector(".mcEditor");
 
 function close() {
 
     console.log("Close");
-
-    var closeView = document.querySelector(".closeView");
-    var mcContainer = document.querySelector(".macwearCustomiserContainer");
-    var mcEditor = document.querySelector(".mcEditor");
-
     //Make Sure they want to close
+    closeView = document.querySelector(".closeView");
     closeView.classList.add("cvActive");
 
     var yesBtn = document.querySelector(".yesBtn");
@@ -53,9 +53,12 @@ function close() {
         } else {
             mcContainer.classList.add("mcContainerClose");
         }
-
+        mcEditor = document.querySelector(".mcEditor");
         mcEditor.classList.add("mcEditorClose");
-        noClick = "no";
+
+        closeView = document.querySelector(".closeView");
+        closeView.classList.toggle("cvActive");
+        yesClick = "no";
 
     } else if (noClick === "yes") {
         console.log("no");
@@ -78,5 +81,34 @@ function noClicked() {
 
     noClick = "yes";
     close();
+
+}
+
+
+
+// Open
+
+function open() {
+    console.log("Open");
+    mcContainer = document.querySelector(".macwearCustomiserContainer");
+    mcPreloader = document.querySelector(".mcPreload");
+
+    //Show Preloader
+    mcPreloader.classList.add("preloaderActive");
+
+    //Remove Close Classes
+    setTimeout(function() {
+        mcContainer.classList.remove("mcContainerCloseDisplay");
+    }, 1000);
+
+    setTimeout(function() {
+        mcContainer.classList.remove("mcContainerClose");
+    }, 2000);
+
+    setTimeout(function() {
+        mcPreloader.classList.remove("preloaderActive");
+    }, 2500);
+
+
 
 }
