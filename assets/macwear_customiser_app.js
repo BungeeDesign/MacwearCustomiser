@@ -18,6 +18,30 @@ function init() {
     var customiseBtn = document.querySelector(".customiseBtn");
     customiseBtn.addEventListener("click", open);
 
+    var mapPoint = document.querySelector(".centerTee");
+    mapPoint.addEventListener("click", locationSelect);
+
+    var mapPoint = document.querySelector(".centerTeeBack");
+    mapPoint.addEventListener("click", locationSelect);
+
+    var mapPoint = document.querySelector(".leftBreast");
+    mapPoint.addEventListener("click", locationSelect);
+
+    var mapPoint = document.querySelector(".rightBreast");
+    mapPoint.addEventListener("click", locationSelect);
+
+    var mapPoint = document.querySelector(".rightShoulder");
+    mapPoint.addEventListener("click", locationSelect);
+
+    var mapPoint = document.querySelector(".leftShoulder");
+    mapPoint.addEventListener("click", locationSelect);
+
+    var switchTee = document.querySelector(".switchTee");
+    switchTee.addEventListener("click", teeToggle);
+
+    
+    
+
 
 }
 
@@ -108,6 +132,39 @@ function open() {
     setTimeout(function() {
         mcPreloader.classList.remove("preloaderActive");
     }, 2500);
+
+
+
+}
+
+
+// Location Selection
+function locationSelect() {
+    //Add Active State to Selection Map Points
+    this.classList.toggle("mpActive");
+}
+
+// Switch to back T-Shirt
+function teeToggle() {
+    console.log("SwitchTee");
+    //Add Rotate Icon State
+    this.classList.toggle("switchIconRotate");
+
+    //Add Rotations States
+
+    var frontTee = document.querySelector(".frontTeeContainer");
+    var backTee = document.querySelector(".backTeeContainer");
+
+    frontTee.classList.toggle("frontRotate");
+    backTee.classList.toggle("backRotate");
+
+    //Toggle Back Map Selection Points
+    var lmFront = document.querySelector(".locationMap");
+    var lmBack = document.querySelector(".locationMapBack");
+    
+    lmFront.classList.toggle("locationMapHidden");
+    lmBack.classList.toggle("locationMapBackActive");
+
 
 
 

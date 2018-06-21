@@ -48,6 +48,11 @@ $dark-grey: #0f0f0f;
     transform: scale(1);
 }
 
+//Form Content (Always Hidden)
+
+.formContent {
+    display: none;
+}
 
 //Editor Section
 .mcEditor {
@@ -69,6 +74,7 @@ $dark-grey: #0f0f0f;
     width: 340px;
     margin-left: auto;
     margin-right: auto;
+    perspective: 860px;
     // box-shadow: -1px 1px 114px rgba(0, 0, 0, 0.86);
 }
 
@@ -81,17 +87,70 @@ $dark-grey: #0f0f0f;
 
 
 // Editor Selection Points Map
+
+.locationMap {
+    width: 800px;
+    position: relative;
+    margin: auto;
+    z-index: 999;
+}
+
+.locationMapBack {
+    display: none;
+    width: 800px;
+    position: relative;
+    margin: auto;
+    z-index: 999;
+
+}
+
+.locationMapBackActive {
+    display: block;
+}
+
+.locationMapHidden {
+    display: none;
+}
+
 .mapPoint {
     width: 30px;
     height: 30px;
     border-radius: 100px;
     background-color: $yellow;
+    color: $dark-grey;
+    opacity: .3;
+    transition: all ease .5s;
+    cursor: pointer;
+    &:hover {
+
+        transform: scale(1.2);
+
+    }
 }
+
+.mpActive {
+    opacity: 1;
+
+}
+
+.faCheck {
+    top: 4px;
+    position: relative;
+}
+
 
 .centerTee {
     position: absolute;
     left: 391px;
     top: 98px;
+    
+}
+
+.centerTeeBack {
+    position: absolute;
+    left: 386px;
+    top: 94px;
+
     
 }
 
@@ -122,6 +181,58 @@ $dark-grey: #0f0f0f;
     left: 250px;
     top: 72px;
 
+}
+
+//Swtich Tee
+
+.switchTee {
+    color: $yellow;
+    font-size: 50px;
+    transition: all ease .5s;
+    cursor: pointer;
+    position: relative;
+    top: 379px;
+}
+
+.switchIconRotate {
+    transform: rotate(360deg);
+
+}
+
+.rotateTeeContainer {
+    transition: all ease .5s;
+    perspective: 600px;
+
+}
+
+.frontTeeContainer {
+    transition: all ease .5s;
+    transform: rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.backTeeContainer {
+    transition: all ease .5s;
+    transform: rotateX(0deg) rotateY(-179deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.frontRotate {
+    transform: rotateX(0deg) rotateY(179deg);
+}
+
+.backRotate {
+    transform: rotateX(0deg) rotateY(0deg);
 }
 
 
@@ -200,9 +311,7 @@ $dark-grey: #0f0f0f;
 }
 
 .backTee {
-    position: absolute;
-    width: 150px;
-    display: none;
+    width: 340px;
 }
 
 // Title Sequence

@@ -2,6 +2,12 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 {{ 'macwear_customiser_app.js' | asset_url | script_tag }}
+<!-- Hidden Form Content -->
+<div class="formContent">
+
+
+</div>
+<!-- Hidden Form Content End -->
 <div class="mcPreload">
   <img class="mcPreloadImage" src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/mc-preload.gif?14192956871630917878" alt="Loading Editor">
 </div>
@@ -22,15 +28,42 @@
 
             <div class="mcEditorLocations">
               <div class="locationMap">
-                <div class="mapPoint centerTee"></div>
-                <div class="mapPoint leftBreast"></div>
-                <div class="mapPoint rightBreast"></div>
-                <div class="mapPoint rightShoulder"></div>
-                <div class="mapPoint leftShoulder"></div>
+                <div class="mapPoint centerTee">
+                  <i class="fas fa-check faCheck"></i>
+                </div>
+                <div class="mapPoint leftBreast">
+                  <i class="fas fa-check faCheck"></i>
+                </div>
+                  <div class="mapPoint rightBreast">
+                <i class="fas fa-check faCheck"></i>
+                </div>
+                <div class="mapPoint rightShoulder">
+                  <i class="fas fa-check faCheck"></i>
+                </div>
+                <div class="mapPoint leftShoulder">
+                  <i class="fas fa-check faCheck"></i>
+                </div>
+              </div>
+              <div class="locationMapBack">
+                  <div class="mapPoint centerTeeBack">
+                      <i class="fas fa-check faCheck"></i>
+                    </div>
               </div>
               <div class="mcEditorProductImage">
-                <img class="frontTee" src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/front-shirt.svg?14192956871630917878" alt="Front Shirt">
-                <img class="backTee" src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/back-shirt.svg?14192956871630917878" alt="Back Shirt">
+                <div class="rotateTeeContainer">
+
+                  <div class="frontTeeContainer">
+                    <img class="frontTee" src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/front-shirt.svg?14192956871630917878" alt="Front Shirt">
+                  </div>
+
+                  <div class="backTeeContainer">
+                    <img class="backTee" src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/back-shirt.svg?14192956871630917878" alt="Back Shirt">
+                  </div>
+
+                </div>
+              </div>
+              <div class="switchTee">
+                <i class="fas fa-sync"></i>
               </div>
             </div>
 
