@@ -21,10 +21,16 @@
                <div class="noBtn"><span>No</span></div>
            </div>
        </div>
+       <div class="mcEditorNav">
+         <div class="mcNext"><i class="fas fa-arrow-right"></i></div>
+         <div class="mcPrevious"><i class="fas fa-arrow-left"></i></div>
+       </div>
         <div class="mcEditorContent">
            <div class="logo"><img src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/logo_f6316d36-866a-40b9-949f-c2d3834cf46a.svg?6159281055296531962" alt="Macwear Customiser"></div>
             <span class="mcTitle a">Welcome to the Macwear Customiser!</span>
             <span class="mcTitle b">Select your embroidery location/s.</span>
+            <span class="mcTitle c">Choose your embroidery type.</span>
+            <span class="mcTitle d">Great! Now upload your Logo/Image.</span>
 
             <div class="mcEditorLocations">
               <div class="locationMap">
@@ -66,7 +72,96 @@
                 <i class="fas fa-sync"></i>
               </div>
             </div>
+            <div class="mcEditorType">
+              <div class="imageEdit">
+                  <div class="mcEditorProductImage">
+                      <div class="rotateTeeContainer">
+      
+                        <div class="frontTeeContainerImage">
+                            <output id="mcImgFrontCenter"></output>
+                            <output id="mcImgFrontLeftBreast"></output>
+                            <output id="mcImgFrontRightBreast"></output>
+                            <output id="mcImgFrontRightShoulder"></output>
+                            <output id="mcImgFrontLeftShoulder"></output>
+                          <img class="frontTee" src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/front-shirt.svg?14192956871630917878" alt="Front Shirt">
+                        </div>
+      
+                        <div class="backTeeContainerImage">
+                            <output id="mcImgFrontCenterTeeBack"></output>
+                          <img class="backTee" src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/back-shirt.svg?14192956871630917878" alt="Back Shirt">
+                        </div>
+      
+                      </div>
+                    </div>
+                    <div class="switchTeeImage">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <div class="uploadImage">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+              </div>
+              <div class="textEdit">
+                <div class="textEditorSection">
+                  <span>Enter Your Text:</span>
+                  <input type="text" name="textEmbroideryValue" value="">
 
+                  <span>Choose Your Font:</span>
+                  <span class="custom-dropdown big">
+                      <select disabled>
+                          <option>Arial</option>
+                          <option>Helvetica</option>  
+                          <option>Times</option>
+                          <option>Verdana</option>
+                          <option>Tahoma</option>
+                      </select>
+                  </span>
+
+                  <span>Choose Your Colour:</span>
+                  <span class="custom-dropdown big">
+                      <select disabled>
+                          <option>Black</option>
+                          <option>White</option>  
+                          <option>Red</option>
+                          <option>Blue</option>
+                          <option>Orange</option>
+                      </select>
+                  </span>
+                </div>
+                  <div class="mcEditorProductImage">
+                      <div class="rotateTeeContainer">
+      
+                        <div class="frontTeeContainerText">
+                            <span class="mcTextFrontCenter"></span>
+                            <span class="mcTextFrontLeftBreast"></span>
+                            <span class="mcTextFrontRightBreast"></span>
+                            <span class="mcTextFrontRightShoulder"></span>
+                            <span class="mcTextFrontLeftShoulder"></span>
+                          <img class="frontTee" src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/front-shirt.svg? 
+                                                          14192956871630917878" alt="Front Shirt">
+                        </div>
+      
+                        <div class="backTeeContainerText">
+                          <span class="mcTextBackCenter"></span>
+                          <img class="backTee" src="https://cdn.shopify.com/s/files/1/0012/4583/9385/files/back-shirt.svg?14192956871630917878" alt="Back Shirt">
+                        </div>
+                  </div>
+              </div>
+              <div class="switchTeeText">
+                  <i class="fas fa-sync"></i>
+              </div>
+              <div class="addText">
+                  <i class="fas fa-font"></i>
+              </div>
+              </div>
+              <div class="imageEmbroidery">
+                  <i class="fas fa-image"></i>
+                  <span class="imageSpanTitle">Image/Logo</span>
+              </div>
+              <div class="textEmbroidery">
+                  <i class="fas fa-text-height"></i>
+                  <span class="textSpanTitle">Text</span> 
+              </div>
+            </div>
         </div>
     </div>
 </div>
@@ -194,8 +289,16 @@
         {% capture "form_class" %}product-form{% if section.settings.enable_payment_button %} product-form--payment-button{% endif %}{%- endcapture %}
 
         {% capture "form_id" %}AddToCartForm-{{ section.id }}{%- endcapture %}
-
         {% form 'product', product, class:form_class, id:form_id %}
+        <!-- Macwear Customiser Form Data Start -->
+        <div class="mcFormContainer">
+          <!-- File Upload -->
+          <p class="line-item-property__field">
+              <label for="custom_photo">Image/Logo (JPG or PNG)</label>
+              <input id="custom_photo" type="file" name="properties[Photo]">
+          </p>
+        </div>
+        <!-- Macwear Customiser Form Data End -->
           {% unless product.has_only_default_variant %}
             {% for option in product.options_with_values %}
               <div class="selector-wrapper js product-form__item">

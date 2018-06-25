@@ -20,7 +20,6 @@ $dark-grey: #0f0f0f;
 }
 
 .mcContainerCloseDisplay {
-
     display: none;
 
 }
@@ -64,6 +63,7 @@ $dark-grey: #0f0f0f;
     box-shadow: -1px 1px 114px rgba(0, 0, 0, 0.37);
     margin-top: 170px;
     padding: 10px;
+    overflow: hidden;
 }
 
 .mcEditorContent {
@@ -78,13 +78,63 @@ $dark-grey: #0f0f0f;
     // box-shadow: -1px 1px 114px rgba(0, 0, 0, 0.86);
 }
 
-
 .logo {
     width: 150px;
     margin-left: auto;
     margin-right: auto;
 }
 
+.mcEditorLocations {
+    margin-top: -80px;
+    transition: all cubic-bezier(1, 0.01, 0.58, 1) .8s;
+}
+
+.mcEditorLocationsMove {
+    transform: translateX(-680px);
+    
+}
+
+//Editor Navigation Arrows
+
+.mcEditorNav {
+    color: $yellow;
+    width: 100%;
+    position: absolute;
+    font-size: 45px;
+    z-index: 999;
+}
+
+.mcNext {
+    opacity: 0;
+    position: absolute;
+    left: 888px;
+    top: 300px;
+    cursor: pointer;
+    transition: all ease .5s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.mcNextActive {
+    opacity: 1;
+}
+
+.mcPrevious {
+    opacity: 0;
+    position: absolute;
+    top: 300px;
+    left: 49px;
+    cursor: pointer;
+    transition: all ease .5s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.mcPreviousActive {
+    opacity: 1;
+}
 
 // Editor Selection Points Map
 
@@ -195,7 +245,7 @@ $dark-grey: #0f0f0f;
 }
 
 .switchIconRotate {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
 
 }
 
@@ -217,6 +267,50 @@ $dark-grey: #0f0f0f;
 }
 
 .backTeeContainer {
+    transition: all ease .5s;
+    transform: rotateX(0deg) rotateY(-179deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.frontTeeContainerImage {
+    transition: all ease .5s;
+    transform: rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.backTeeContainerImage {
+    transition: all ease .5s;
+    transform: rotateX(0deg) rotateY(-179deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.frontTeeContainerText {
+    transition: all ease .5s;
+    transform: rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.backTeeContainerText {
     transition: all ease .5s;
     transform: rotateX(0deg) rotateY(-179deg);
     transform-style: preserve-3d;
@@ -253,6 +347,7 @@ $dark-grey: #0f0f0f;
 .closeViewContainer {
     width: 100%;
     text-align: center;
+    z-index: 99999;
 }
 
 .closeView {
@@ -266,8 +361,8 @@ $dark-grey: #0f0f0f;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 160px;
-    z-index: 2; //Non Active State
+    margin-top: 65px;
+    z-index: 9999; //Non Active State
     opacity: 0;
     transition: all .5s ease;
 }
@@ -345,6 +440,11 @@ $dark-grey: #0f0f0f;
     display: block;
 }
 
+.bRemoveActive {
+    animation: bRemove ease .5s;
+    animation-fill-mode: forwards;
+}
+
 @keyframes bStart {
     0% {
         transform: translateY(0px);
@@ -354,4 +454,249 @@ $dark-grey: #0f0f0f;
         transform: translateY(-24px);
         opacity: 1;
     }
+}
+
+@keyframes bRemove {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(24px);
+        opacity: 0;
+    }
+}
+
+
+.c {
+    opacity: 0;
+    display: block;
+}
+
+.cActive {
+    animation: cStart ease 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cStart {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-61px);
+        opacity: 1;
+    }
+}
+
+
+.d {
+    opacity: 0;
+    display: block;
+}
+
+.dActive {
+    animation: dStart ease 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dStart {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-98px);
+        opacity: 1;
+    }
+}
+
+
+// Embroidery Type
+.mcEditorType {
+    position: relative;
+    transform: translateX(1000px);
+    color: $yellow;
+    font-size: 72px;
+    opacity: 0;
+    transition: all ease .8s;
+    transition-delay: .4s;
+
+}
+
+.mcTypeActive {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.imageEmbroidery {
+    position: relative;
+    cursor: pointer;
+    transition: all ease .5s;
+    top: -201px;
+    z-index: 10002;   
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.imageEmbroideryMove {
+    transform: translateY(500px);
+    opacity: 0;
+}
+
+.textEmbroidery {
+    position: relative;
+    cursor: pointer;
+    transition: all ease .5s;
+    top: -160px;
+    z-index: 10002;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.textEmbroideryMove {
+    transform: translateY(500px);
+    opacity: 0;
+}
+
+.imageEdit {
+    transition: all ease .5s;
+    opacity: 0;
+    bottom: 49px;
+    position: relative;
+    z-index: 10001;
+}
+
+.ieActive {
+    opacity: 1;
+}
+
+.switchTeeImage {
+    color: $yellow;
+    font-size: 50px;
+    transition: all ease .5s;
+    cursor: pointer;
+    position: relative;
+    top: 350px;
+    display: inline-block;
+}
+
+
+.uploadImage {
+    color: $yellow;
+    font-size: 50px;
+    transition: all ease .5s;
+    cursor: pointer;
+    position: relative;
+    top: 350px;
+    display: inline-block;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.textEdit {
+    transition: all ease .5s;
+    opacity: 0;
+    bottom: 165px;
+    position: relative;
+    z-index: 9999;
+
+}
+
+.switchTeeText {
+    color: $yellow;
+    font-size: 50px;
+    transition: all ease .5s;
+    cursor: pointer;
+    position: relative;
+    top: 350px;
+    display: inline-block;
+}
+
+
+.addText {
+    color: $yellow;
+    font-size: 50px;
+    transition: all ease .5s;
+    cursor: pointer;
+    position: relative;
+    top: 350px;
+    display: inline-block;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.teActive {
+    opacity: 1;
+}
+
+
+// Image Output Tag
+
+#mcImgFrontCenter {
+    width: 60px;
+    position: absolute;
+    left: 148px;
+    top: 63px;
+}
+
+#mcImgFrontLeftBreast {
+    width: 60px;
+    position: absolute;
+    left: 81px;
+    top: 52px;
+}
+
+#mcImgFrontRightBreast {
+    width: 60px;
+    position: absolute;
+    left: 206px;
+    top: 52px;
+}
+
+#mcImgFrontRightShoulder {
+    width: 41px;
+    position: absolute;
+    left: 286px;
+    top: 33px;
+}
+
+#mcImgFrontLeftShoulder {
+    width: 41px;
+    position: absolute;
+    left: 14px;
+    top: 33px;
+}
+
+#mcImgFrontCenterTeeBack {
+    width: 60px;
+    position: absolute;
+    left: 139px;
+    top: 43px;
+}
+
+.textEditorSection {
+    position: absolute;
+    font-size: 25px;
+    display: inline-block;
+    background-color: #0f0f0f;
+    z-index: 1006;
+    box-shadow: -1px 1px 114px rgba(0,0,0,0.75);
+    width: 730px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 70px;
+   visibility: hidden;
+}
+
+
+// Form Styles
+.mcFormContainer {
+    display: none;
+
 }
