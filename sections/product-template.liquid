@@ -298,6 +298,7 @@
               <input id="custom_photo" type="file" name="properties[Photo]">
           </p>
         </div>
+
         <!-- Macwear Customiser Form Data End -->
           {% unless product.has_only_default_variant %}
             {% for option in product.options_with_values %}
@@ -405,7 +406,7 @@
         "type": "checkbox",
         "id": "enable_ajax",
         "label": "Stay on current page when item is added to cart",
-        "default": true
+        "default": false
       },
       {
         "type": "checkbox",

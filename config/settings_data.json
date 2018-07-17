@@ -208,10 +208,21 @@
           "show_share_buttons": true,
           "social_message": "Spread the word"
         }
+      },
+      "1530063218049": {
+        "type": "featured-content",
+        "settings": {
+          "title": "WEAR YOUR BRAND!",
+          "subtext": "Shop Our Polo Range Now!",
+          "link": "shopify:\/\/products\/fruit-of-the-loom-poly-cotton-pique-polo-shirt",
+          "image": "shopify:\/\/shop_images\/section-image-your-logo.png",
+          "image_align": "center center"
+        }
       }
     },
     "content_for_index": [
       "featured-collections",
+      "1530063218049",
       "featured-products",
       "image-content"
     ]
