@@ -3,9 +3,8 @@
 // Built with ❤ by Bungee Design
 // Project Manage Via MacwearCustomiser Git Repo
 
-//Temp Notes:
-// All console logs will be reomved once in Production Release
-// Add in Google Drive, One Drive and Dropbox support for image upload
+// Relase: v1.00
+// All code is property of Bungee Design Limited 
 
 // Make sure document has fully loaded ready for DOM Control when ready run init
 window.onload = function () {
