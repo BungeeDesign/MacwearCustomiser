@@ -1,4 +1,7 @@
 # Macwear Customiser
+
+[![GitHub Release](https://github.com/BungeeDesign/MacwearCustomiser/tree/v1.0.0.svg)]()
+
 ### A Shopify Product Application
 
 #### Macwear Customiser - Custom Product Customiser allows users to upload an Image or Add text to a specific product. The Application allows for multiple logo or text location placement and also text/styles. The application shows a finished custom design once finished. 
