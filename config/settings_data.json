@@ -12,10 +12,10 @@
     "color_footer_text": "#ffdd00",
     "color_hero_text": "#2f2f2f",
     "color_hero_bg": "#ffdd00",
-    "type_accent_family": "ibm_plex_sans_n3",
+    "type_accent_family": "ibm_plex_sans_n4",
     "type_accent_spacing": true,
     "type_accent_transform": true,
-    "type_base_family": "ibm_plex_sans_n2",
+    "type_base_family": "ibm_plex_sans_n3",
     "type_base_size": "17px",
     "type_nav_size": "15px",
     "type_nav_spacing": true,
@@ -111,7 +111,7 @@
           "featured-collections-0": {
             "type": "collection",
             "settings": {
-              "collection": "frontpage"
+              "collection": "t-shirts"
             }
           },
           "featured-collections-1": {
@@ -139,7 +139,7 @@
       "featured-products": {
         "type": "featured-products",
         "settings": {
-          "collection": "frontpage",
+          "collection": "polos",
           "rows": 2
         }
       },
@@ -149,7 +149,7 @@
           "image-content-0": {
             "type": "image_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/section-image.png"
+              "image": "shopify:\/\/shop_images\/section-image-quality-assured.png"
             }
           },
           "image-content-1": {
@@ -213,9 +213,19 @@
         "type": "featured-content",
         "settings": {
           "title": "WEAR YOUR BRAND!",
-          "subtext": "Shop Our Polo Range Now!",
-          "link": "shopify:\/\/products\/fruit-of-the-loom-poly-cotton-pique-polo-shirt",
-          "image": "shopify:\/\/shop_images\/section-image-your-logo.png",
+          "subtext": "Shop Our T-Shirt & Polo Range Now!",
+          "link": "shopify:\/\/collections\/t-shirts-polos",
+          "image": "shopify:\/\/shop_images\/section-image-your-logo_a649ddda-6242-4298-b49c-e2f5c99a1468.png",
+          "image_align": "center center"
+        }
+      },
+      "1530066218472": {
+        "type": "featured-content",
+        "settings": {
+          "title": "CUstomise With Ease",
+          "subtext": "With The Macwear Customiser - Learn More Here >",
+          "link": "shopify:\/\/pages\/macwear-customiser",
+          "image": "shopify:\/\/shop_images\/Isometric_Perspective_Mock-Up.png",
           "image_align": "center center"
         }
       }
@@ -224,7 +234,8 @@
       "featured-collections",
       "1530063218049",
       "featured-products",
-      "image-content"
+      "image-content",
+      "1530066218472"
     ]
   },
   "presets": {

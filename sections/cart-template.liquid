@@ -12,6 +12,9 @@
           </thead>
           <tbody id="CartProducts">
             {% for item in cart.items %}
+            {% if item.product.tags contains "_embro" %}
+              
+            {% else %}
               <tr class="cart__row responsive-table__row">
                 <td class="cart__cell--image text-center">
                   <a href="{{ item.url | within: collections.all }}" class="cart__image">
@@ -33,7 +36,7 @@
                       {% unless p.last == blank or first_character_in_key == '_' %}
                         {{ p.first }}:
                         {% if p.last contains '/uploads/' %}
-                          <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                          <a href="{{ p.last }}">Click to view</a>
                         {% else %}
                           {{ p.last }}
                         {% endif %}
@@ -62,7 +65,9 @@
                   {% endfor %}
                 </td>
               </tr>
+              {% endif %}
             {% endfor %}
+            <a href="/cart/clear" class="clear-cart btn">Clear All Items From Cart</a>
           </tbody>
         </table>
         <div class="grid cart__row">
@@ -149,6 +154,20 @@
       </tr>
       {{/items}}
     {% endraw %}
+
+    $(function() {
+  $('.clear-cart').on('click',function(e){
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: '/cart/clear.js',
+      success: function(){
+        alert('I cleared the cart!');
+      },
+      dataType: 'json'
+    });
+  })
+});
   </script>
 </div>
 

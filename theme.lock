@@ -2,7 +2,7 @@
 assets/ajax-loader.gif:
   development: 2018-06-14T05:22:08+01:00   deca8b0ecd6974227d157b6d7068995d
 assets/custom.scss.liquid:
-  development: 2018-06-25T03:29:00+01:00   b1885b2c21903a9f06e815f10159330d
+  development: 2018-07-19T01:39:58+01:00   eefa886fcc93ee4fdcea0bbbc0392143
 assets/gift-card.js:
   development: 2018-06-14T05:22:08+01:00   c73df2ee57cc9eb577f7a1858063495d
 assets/gift-card.scss.liquid:
@@ -14,7 +14,7 @@ assets/lazysizes.js:
 assets/lazysizes.min.js:
   development: 2018-06-14T05:22:08+01:00   f05bbc6e1c8ffb06055dc81d0cb5f2ee
 assets/macwear_customiser_app.js:
-  development: 2018-06-25T02:56:14+01:00   02111f91b7cc8a45d1944e2207ea2dd1
+  development: 2018-08-31T03:27:48+01:00   eb7a6812de0c7ede543767388332c525
 assets/match-media.min.js:
   development: 2018-06-07T15:28:58+01:00   d0bf06c458a236dcca39b3be8cf80ec5
 assets/password.js:
@@ -26,7 +26,7 @@ assets/theme.scss.liquid:
 assets/vendor.js:
   development: 2018-06-14T05:22:08+01:00   06b4f8919f55c188d4cd230c1d62a849
 config/settings_data.json:
-  development: 2018-06-27T02:39:23+01:00   90c507601e159d87925cba50506be4bb
+  development: 2018-08-31T06:00:04+01:00   84b1bb430d4c9376d8afaba0b6976a8e
 config/settings_schema.json:
   development: 2018-06-14T05:22:13+01:00   a4209db5f785396dd5ae4fda386a85ca
 layout/gift_card.liquid:
@@ -62,7 +62,7 @@ sections/blog-template.liquid:
 sections/brand-list.liquid:
   development: 2018-06-14T05:22:06+01:00   4518b726c27e1a0f1da692d4dc7c8fe2
 sections/cart-template.liquid:
-  development: 2018-06-25T03:55:15+01:00   565b3bae2bb543ad15b8a0159c855268
+  development: 2018-08-31T04:48:59+01:00   e53e22a29c64400429d24aa2eebaff0b
 sections/collection-filters.liquid:
   development: 2018-06-14T05:22:06+01:00   e78207380912cd6931f18b91da4bf201
 sections/collection-list.liquid:
@@ -122,7 +122,7 @@ sections/password-footer.liquid:
 sections/password-header.liquid:
   development: 2018-06-14T05:22:07+01:00   f0d01f9592a3dadc07c9bd3d0126a9f1
 sections/product-template.liquid:
-  development: 2018-07-17T17:39:38+01:00   107f9c45e872fee19a5fe00b5668b4ee
+  development: 2018-07-19T01:55:49+01:00   729d67d9ad60be022e4fece5695f6b88
 sections/quotes.liquid:
   development: 2018-06-14T05:22:07+01:00   06675b8607dfebed53e905f63231ebe7
 sections/rich-text.liquid:
