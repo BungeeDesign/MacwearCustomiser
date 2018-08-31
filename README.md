@@ -1,6 +1,6 @@
 # Macwear Customiser
 
-[![GitHub Release](https://github.com/BungeeDesign/MacwearCustomiser/tree/v1.0.0.svg)]()
+[![release](https://img.shields.io/badge/release-v1.0.0-brightgreen.svg)](https://github.com/BungeeDesign/MacwearCustomiser/tree/v1.0.0)
 
 ### A Shopify Product Application
 
