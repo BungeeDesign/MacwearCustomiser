@@ -1,17 +1,17 @@
 {
   "current": {
-    "color_header_bg": "#2f2f2f",
+    "color_header_bg": "#020d1c",
     "color_header_links": "#ffffff",
     "color_body_bg": "#e9e9e9",
-    "color_content_bg": "#fff",
+    "color_content_bg": "#ffffff",
     "color_body_headings": "#030303",
     "color_body_text": "#666",
-    "color_button_bg": "#ffdd00",
+    "color_button_bg": "#0d64ff",
     "color_button_text": "#2f2f2f",
-    "color_footer_bg": "#2f2f2f",
-    "color_footer_text": "#ffdd00",
-    "color_hero_text": "#2f2f2f",
-    "color_hero_bg": "#ffdd00",
+    "color_footer_bg": "#020d1c",
+    "color_footer_text": "#0d64ff",
+    "color_hero_text": "#052149",
+    "color_hero_bg": "#0d64ff",
     "type_accent_family": "ibm_plex_sans_n4",
     "type_accent_spacing": true,
     "type_accent_transform": true,
@@ -60,25 +60,25 @@
           "placeholder": {
             "type": "slide",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Macwear-Warehouse-Graded.png",
+              "image": "shopify:\/\/shop_images\/WV-Warehouse-Graded.png",
               "title": "FREE EMBROIDERY",
-              "subheading": "On your first order! >",
+              "subheading": "On your first order!",
               "link": ""
             }
           },
-          "1528953815345": {
+          "1542241561497": {
             "type": "slide",
             "settings": {
-              "image": "shopify:\/\/shop_images\/fruit_of_the_loom_summer_shirt.jpg",
-              "title": "Summer Sale Now On!",
-              "subheading": "Shop Now! >",
-              "link": "shopify:\/\/collections\/all"
+              "image": "shopify:\/\/shop_images\/Shop_our_value_range_by_Uneek.jpg",
+              "title": "Our Value Range By UNEEK",
+              "subheading": "Shop Now >",
+              "link": "shopify:\/\/collections\/value-range"
             }
           }
         },
         "block_order": [
           "placeholder",
-          "1528953815345"
+          "1542241561497"
         ],
         "settings": {}
       },
@@ -111,7 +111,7 @@
           "featured-collections-0": {
             "type": "collection",
             "settings": {
-              "collection": "t-shirts"
+              "collection": "hoodies"
             }
           },
           "featured-collections-1": {
@@ -149,7 +149,7 @@
           "image-content-0": {
             "type": "image_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/section-image-quality-assured.png"
+              "image": "shopify:\/\/shop_images\/section-image-quality-assured_08a31987-e96d-435e-b9b2-c589d9846ec3.png"
             }
           },
           "image-content-1": {
@@ -170,8 +170,8 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/logo.png",
-          "logo_max_width": "150",
+          "logo": "shopify:\/\/shop_images\/logo_34268f6e-f083-41cf-b5a6-ac5dfc4544c1.png",
+          "logo_max_width": "100",
           "main_linklist": "main-menu",
           "promo_bar_enable": false,
           "promo_bar_text": "SALE NOW ON!",
@@ -215,7 +215,7 @@
           "title": "WEAR YOUR BRAND!",
           "subtext": "Shop Our T-Shirt & Polo Range Now!",
           "link": "shopify:\/\/collections\/t-shirts-polos",
-          "image": "shopify:\/\/shop_images\/section-image-your-logo_a649ddda-6242-4298-b49c-e2f5c99a1468.png",
+          "image": "shopify:\/\/shop_images\/your-logo.png",
           "image_align": "center center"
         }
       },
@@ -225,13 +225,47 @@
           "title": "CUstomise With Ease",
           "subtext": "With The Macwear Customiser - Learn More Here >",
           "link": "shopify:\/\/pages\/macwear-customiser",
-          "image": "shopify:\/\/shop_images\/Isometric_Perspective_Mock-Up.png",
+          "image": "shopify:\/\/shop_images\/WV-Warehouse-Graded.png",
           "image_align": "center center"
+        }
+      },
+      "featured-products-subsection": {
+        "type": "featured-products-subsection",
+        "settings": {
+          "collection": ""
+        }
+      },
+      "1542244475066": {
+        "type": "newsletter",
+        "settings": {
+          "heading": "Sign Up to get exclusive deals!",
+          "subheading": "<p>Sign up to our newsletter to get exclusive offers &amp; deals!<\/p>"
+        }
+      },
+      "1542245392969": {
+        "type": "featured-product",
+        "settings": {
+          "product": "ux5-ux-full-zip-fleece",
+          "enable_ajax": true,
+          "stock_enable": false,
+          "social_sharing_products": true,
+          "enable_payment_button": true
+        }
+      },
+      "1542935242010": {
+        "type": "featured-products",
+        "disabled": true,
+        "settings": {
+          "collection": "cyber-monday-sale-10-off-at-checkout",
+          "rows": 3
         }
       }
     },
     "content_for_index": [
       "featured-collections",
+      "1542935242010",
+      "1542245392969",
+      "1542244475066",
       "1530063218049",
       "featured-products",
       "image-content",
