@@ -61,9 +61,25 @@ $dark-grey: #0f0f0f;
     margin-left: auto;
     margin-right: auto;
     box-shadow: -1px 1px 114px rgba(0, 0, 0, 0.37);
-    margin-top: 170px;
+    margin-top: 70px;
     padding: 10px;
     overflow: hidden;
+
+    @media screen and (max-width: 1060px) {
+        width: 590px;
+    }
+
+    @media screen and (max-width: 700px) {
+        width: 323px;
+        margin-top: 30px;
+        height: 573px;
+        overflow-y: scroll;
+    }
+    // Small phones - iPhone 5 etc
+    @media screen and (max-height: 568px) {
+        height: 528px;
+    }
+
 }
 
 .mcEditorContent {
@@ -76,6 +92,9 @@ $dark-grey: #0f0f0f;
     margin-right: auto;
     perspective: 860px;
     // box-shadow: -1px 1px 114px rgba(0, 0, 0, 0.86);
+    @media screen and (max-width: 700px) {
+        width: 270px;
+    }
 }
 
 .logo {
@@ -102,6 +121,9 @@ $dark-grey: #0f0f0f;
     position: absolute;
     font-size: 45px;
     z-index: 999;
+    @media screen and (max-width: 1060px) {
+           position: relative;
+    }
 }
 
 .mcNext {
@@ -113,6 +135,14 @@ $dark-grey: #0f0f0f;
     transition: all ease .5s;
     &:hover {
         transform: scale(1.2);
+    }
+    @media screen and (max-width: 1060px) {
+        left: 506px;
+        top: 600px;
+    }
+    @media screen and (max-width: 700px) {
+        left: 256px;
+        top: 673px;
     }
 }
 
@@ -130,6 +160,14 @@ $dark-grey: #0f0f0f;
     &:hover {
         transform: scale(1.2);
     }
+    @media screen and (max-width: 1060px) {
+        left: 30px;
+        top: 600px;
+    }
+    @media screen and (max-width: 700px) {
+        left: 14px;
+        top: 673px;
+    }
 }
 
 .mcPreviousActive {
@@ -143,6 +181,13 @@ $dark-grey: #0f0f0f;
     position: relative;
     margin: auto;
     z-index: 999;
+    @media screen and (max-width: 1060px) {
+        left: -117px;
+    }
+    @media screen and (max-width: 700px) {
+        left: -250px;
+        transform: scale(0.8);
+    }
 }
 
 .locationMapBack {
@@ -151,7 +196,13 @@ $dark-grey: #0f0f0f;
     position: relative;
     margin: auto;
     z-index: 999;
-
+    @media screen and (max-width: 1060px) {
+        left: -117px;
+    }
+    @media screen and (max-width: 700px) {
+        left: -250px;
+        transform: scale(0.8);
+    }
 }
 
 .locationMapBackActive {
@@ -347,6 +398,7 @@ $dark-grey: #0f0f0f;
     float: right;
     cursor: pointer;
     transition: all ease .5s;
+    z-index: 999999999999;
     &:hover {
         transform: scale(1.1);
     }
@@ -373,6 +425,10 @@ $dark-grey: #0f0f0f;
     z-index: 9999; //Non Active State
     opacity: 0;
     transition: all .5s ease;
+
+    @media screen and (max-height: 568px) {
+        margin-top: 344px;
+    }
 }
 
 .cvActive {
